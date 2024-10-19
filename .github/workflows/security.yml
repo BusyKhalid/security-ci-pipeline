@@ -1,4 +1,4 @@
-name: "Security CI Pipeline"
+name: "Security"
 
 on:
   push:
