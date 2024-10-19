@@ -1,13 +1,22 @@
 # Security CI Pipeline
 
-A GitHub Actions pipeline for security checks, scanning container images, code dependencies, source code, and detecting exposed secrets.
+A streamlined GitHub Actions pipeline for comprehensive security checks, including scans for vulnerabilities in container images, code dependencies, source code, and detection of exposed secrets.
 
 ## Usage
 
-1. Place the workflow file in `.github/workflows/security.yml`.
-2. Runs automatically on pushes, pull requests to `main`, and weekly on Sundays.
-3. View results in the repository's "Security" tab.
+1. Add the workflow file to `.github/workflows/security.yml`.
+2. The pipeline triggers automatically on:
+   - Pushes to `main`
+   - Pull requests targeting `main`
+   - A scheduled run every Sunday
+3. Review detailed scan results in the repository's **Security** tab.
 
 ## License
 
-Licensed under MIT.
+This project is licensed under the MIT License.
+
+---
+
+**Developed by [Khalid Alraddady](https://www.linkedin.com/in/your-linkedin-profile)**
+
+Feel free to reach out with any questions, suggestions, or feedback!
