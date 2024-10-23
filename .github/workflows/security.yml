@@ -17,6 +17,26 @@ permissions:
   actions: read
 
 jobs:
+  megalinter:
+    name: MegaLinter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Cache MegaLinter
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/megalinter
+          key: ${{ runner.os }}-megalinter-${{ hashFiles('**/*') }}
+          restore-keys: |
+            ${{ runner.os }}-megalinter-
+
+      - name: Run MegaLinter
+        uses: oxsecurity/megalinter@v8.1.0
+
   trivy-scan:
     name: Trivy Vulnerability Scan
     runs-on: ubuntu-latest
